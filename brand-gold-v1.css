@@ -1,0 +1,146 @@
+/* Previous black-and-gold theme (in use until 31 Oct 2026). To switch back, copy this file over brand.css. */
+/* Black-and-gold theme, applied on top of styles.css.
+   Loaded by every public page; admin.html deliberately does not load it.
+   The previous navy theme is kept in brand-navy.css: copy it over this file to switch back. */
+:root {
+  color-scheme: dark;
+  --bg: #000;
+  --panel: #0b0b0c;
+  --panel-2: #111112;
+  --text: #f7f5f0;
+  --muted: #9d9689;
+  --gold: #d9b96a;
+  --gold-2: #f2dfab;
+  --gold-deep: #a8873f;
+  --gold-ink: #1a1200;
+  --line: rgba(217,185,106,.17);
+  --line-soft: rgba(255,255,255,.07);
+  --control-line: rgba(255,255,255,.22);
+  --whatsapp: #25d366;
+  --whatsapp-hover: #1ebe5b;
+
+  /* Names styles.css uses, remapped */
+  --card: var(--panel);
+  --ink: var(--text);
+  --navy: var(--gold);
+  --navy-dark: var(--text);
+  --amber: var(--gold);
+  --amber-dark: var(--gold-2);
+  --ok: #8fd6a8;
+  --err: #f2a7a0;
+
+  --serif: 'Instrument Serif', Georgia, 'Times New Roman', serif;
+  --sans: 'Space Grotesk', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --mono: 'DM Mono', ui-monospace, Menlo, Consolas, monospace;
+  --focus-ring: 0 0 0 2px #000, 0 0 0 4px var(--gold);
+}
+
+html { scroll-padding-top: 84px; }
+body { background: var(--bg); color: var(--text); }
+h1, h2, h3 { font-weight: 400; letter-spacing: -.01em; }
+h1 { line-height: 1.08; }
+a { color: var(--gold-2); text-underline-offset: 3px; }
+a:hover { color: var(--gold); }
+.btn:focus-visible, a:focus-visible, summary:focus-visible { outline: none; box-shadow: var(--focus-ring); border-radius: 6px; }
+
+/* Small uppercase lines in mono gold */
+.eyebrow, .kicker, .timeline b, .agenda th, .status { font-family: var(--mono); font-weight: 500; }
+.eyebrow, .kicker { color: var(--gold); text-transform: uppercase; letter-spacing: .12em; font-size: .74rem; }
+
+/* Topbar */
+.topbar { background: rgba(0,0,0,.94); border-bottom: 1px solid var(--line); position: sticky; top: 0; z-index: 10; backdrop-filter: blur(8px); }
+.brand { display: inline-flex; align-items: center; gap: 12px; color: var(--text); font-weight: 400; font-size: 1.25rem; }
+.brand-logo { width: 48px; height: 48px; object-fit: contain; flex: none; }
+.topbar nav a { color: var(--muted); }
+.topbar nav a:hover, .topbar nav a[aria-current] { color: var(--gold); }
+
+/* Hero bands: black with a faint gold glow and the circuit-trace motif */
+.hero, .page-hero {
+  position: relative; overflow: hidden; color: var(--text);
+  background: radial-gradient(ellipse at 80% 0%, rgba(217,185,106,.10), transparent 55%), var(--bg);
+  border-bottom: 1px solid var(--line);
+}
+.hero .wrap { position: relative; z-index: 1; }
+.hero h1, .page-hero h1 { color: var(--text); font-size: clamp(2.4rem, 5vw, 3.6rem); }
+.page-hero h1 { font-size: clamp(2rem, 4vw, 2.8rem); }
+.hero p, .page-hero p { color: #cbc6bb; opacity: 1; }
+.hero-cta small { color: var(--muted); opacity: 1; }
+.hero-traces { position: absolute; left: -40px; bottom: -30px; width: 420px; height: 260px; opacity: .3; pointer-events: none; }
+.hero-traces path { fill: none; stroke: var(--gold); stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+.hero-traces circle { fill: none; stroke: var(--gold); stroke-width: 3; }
+
+.details { background: var(--panel); color: var(--text); border: 1px solid var(--line); box-shadow: none; border-radius: 16px; }
+.details h3 { color: var(--gold); }
+.details dt { color: var(--text); }
+.details dd { color: var(--muted); }
+
+/* Buttons: gold fill with dark ink */
+.btn { background: var(--gold); color: var(--gold-ink); }
+.btn:hover { background: var(--gold-2); color: var(--gold-ink); }
+.btn-ghost { background: transparent; color: var(--text); border: 1px solid var(--control-line); }
+.btn-ghost:hover { background: rgba(255,255,255,.05); color: var(--text); }
+.btn-wa { background: var(--whatsapp); color: #04210f; }
+.btn-wa:hover { background: var(--whatsapp-hover); color: #04210f; }
+
+/* Sections and cards */
+section.alt { background: #07070a; border-top: 1px solid var(--line-soft); border-bottom: 1px solid var(--line-soft); }
+.card { background: var(--panel); border-color: var(--line); border-radius: 16px; }
+section.alt .card { background: var(--panel-2); }
+.card h3, .facilitator h3 { color: var(--gold-2); }
+
+table.agenda { background: var(--panel); border-color: var(--line); border-radius: 16px; }
+.agenda th { background: var(--panel-2); color: var(--muted); }
+.agenda th, .agenda td { border-bottom-color: var(--line-soft); }
+.agenda td:first-child { color: var(--gold); font-family: var(--mono); font-weight: 400; }
+.agenda td span, .agenda td.out { color: var(--muted); }
+
+.creds { color: var(--muted); }
+.timeline li { border-left-color: var(--gold-deep); }
+.timeline b { color: var(--gold); }
+.callout { background: var(--panel); border-left-color: var(--gold); }
+.price { color: var(--gold-2); font-weight: 400; }
+.status { background: var(--panel-2); color: var(--gold); border: 1px solid var(--line); }
+.status.open { background: rgba(143,214,168,.1); color: var(--ok); border-color: rgba(143,214,168,.3); }
+.status.closed { background: rgba(180,40,40,.15); color: var(--err); border-color: rgba(180,40,40,.34); }
+
+/* Forms */
+input[type=text], input[type=email], input[type=tel], input[type=password], input[type=search], select, textarea {
+  background: var(--panel-2); color: var(--text); border-color: var(--control-line);
+}
+input::placeholder, textarea::placeholder { color: var(--muted); }
+input:focus, select:focus, textarea:focus { outline-color: var(--gold); border-color: var(--gold); }
+form label .opt { color: var(--muted); }
+.consent input, .choices input { accent-color: var(--gold); }
+.note { color: var(--muted); }
+.msg.ok { background: rgba(143,214,168,.08); color: var(--ok); border-color: rgba(143,214,168,.3); }
+.msg.err { background: rgb(43,10,12); color: var(--err); border-color: rgba(180,40,40,.34); }
+.next-steps { background: var(--panel-2); border-color: var(--line); }
+.next-steps .step { border-top-color: var(--line-soft); }
+.next-steps .step span { color: var(--muted); }
+.demo-banner, .draft-flag { background: rgba(217,185,106,.08); color: var(--gold-2); border-color: var(--line); }
+
+fieldset.q legend .num { color: var(--gold); font-family: var(--mono); }
+.choices label { background: var(--panel-2); border-color: var(--control-line); color: var(--text); }
+.choices label:has(input:checked) { border-color: var(--gold); background: rgba(217,185,106,.12); }
+.scale-ends { color: var(--muted); }
+.waitlist-box { background: var(--panel-2); border-color: var(--line); }
+
+details.faq { border-bottom-color: var(--line); }
+details.faq summary { color: var(--text); }
+details.faq p { color: var(--muted); }
+
+/* Imagery */
+.register-emblem { display: block; width: 240px; max-width: 70%; height: auto; margin-top: 18px; }
+.facilitator-photo { display: block; width: 180px; height: 180px; object-fit: cover; object-position: 50% 25%; border-radius: 16px; border: 1px solid var(--line); margin-bottom: 18px; }
+
+/* Footer */
+footer { border-top: 1px solid var(--line); color: var(--muted); }
+footer .footer-brand { display: inline-flex; align-items: center; gap: 10px; color: var(--text); font-family: var(--serif); font-size: 1.1rem; }
+footer .footer-brand img { width: 48px; height: 48px; object-fit: contain; }
+footer nav a { color: var(--muted); }
+footer nav a:hover { color: var(--gold); }
+
+@media (max-width: 800px) {
+  .hero-traces { width: 300px; height: 190px; opacity: .2; }
+  .register-emblem { width: 140px; }
+}

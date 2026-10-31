@@ -1,0 +1,197 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Webinar Feedback</title>
+  <meta name="description" content="Two-minute feedback form for the webinar AI in the Day of a Medical Educator.">
+  <link rel="icon" href="assets/favicon.ico" sizes="any">
+  <link rel="apple-touch-icon" href="assets/brain-bulb-mark.png">
+  <meta name="theme-color" content="#121212">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@300;400;500;600&display=swap">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="brand.css">
+</head>
+<body>
+  <div class="progress" aria-hidden="true"></div>
+  <div id="demoBanner" class="demo-banner" hidden>Demo mode: responses are saved only in this browser. Add your Apps Script URL in config.js to go live.</div>
+
+  <header class="topbar">
+    <div class="wrap">
+      <a class="brand" href="index.html"><img class="brand-logo" src="assets/brain-bulb-mark.png" alt=""><span>The AI-Ready Medical Teacher</span></a>
+      <nav><a href="index.html">Webinar</a><a href="workshop.html">Starter workshop</a></nav>
+      <a class="btn btn-sm nav-cta" href="index.html#register">Save my seat</a>
+    </div>
+  </header>
+
+  <div class="page-hero">
+    <div class="wrap narrow">
+      <div class="eyebrow">AI in the Day of a Medical Educator · 21 November 2026</div>
+      <h1>Thank you for joining. Two minutes of <em>feedback?</em></h1>
+      <p>Six short questions. Your answers shape what comes next in the series, including whether a hands-on workshop is worth running.</p>
+    </div>
+  </div>
+
+  <section>
+    <div class="wrap narrow">
+      <div class="card">
+        <form id="surveyForm" novalidate>
+          <div class="row-2">
+            <div class="field"><label for="email">Email you registered with</label><input id="email" name="email" type="email" required maxlength="160" autocomplete="email"></div>
+            <div class="field"><label for="name">Name <span class="opt">(optional)</span></label><input id="name" name="name" type="text" maxlength="120" autocomplete="name"></div>
+          </div>
+
+          <fieldset class="q">
+            <legend><span class="num">1.</span> Which task takes most of your teaching-preparation time?</legend>
+            <div class="choices">
+              <label><input type="radio" name="prepTask" value="Objectives &amp; lesson plans" required> Objectives &amp; lesson plans</label>
+              <label><input type="radio" name="prepTask" value="Slides"> Slides</label>
+              <label><input type="radio" name="prepTask" value="Clinical cases"> Clinical cases</label>
+              <label><input type="radio" name="prepTask" value="MCQs &amp; assessment"> MCQs &amp; assessment</label>
+              <label><input type="radio" name="prepTask" value="Feedback"> Feedback</label>
+              <label><input type="radio" name="prepTask" value="Other"> Other</label>
+            </div>
+          </fieldset>
+
+          <fieldset class="q">
+            <legend><span class="num">2.</span> How useful was today's session for your academic work?</legend>
+            <div class="choices">
+              <label><input type="radio" name="usefulness" value="1" required> 1</label>
+              <label><input type="radio" name="usefulness" value="2"> 2</label>
+              <label><input type="radio" name="usefulness" value="3"> 3</label>
+              <label><input type="radio" name="usefulness" value="4"> 4</label>
+              <label><input type="radio" name="usefulness" value="5"> 5</label>
+            </div>
+            <div class="scale-ends"><span>Not useful</span><span>Very useful</span></div>
+          </fieldset>
+
+          <fieldset class="q">
+            <legend><span class="num">3.</span> How likely are you to attend a 2-hour hands-on workshop in which you build a teaching pack for a topic you teach?</legend>
+            <div class="choices">
+              <label><input type="radio" name="likelihood" value="Very unlikely" required> Very unlikely</label>
+              <label><input type="radio" name="likelihood" value="Unlikely"> Unlikely</label>
+              <label><input type="radio" name="likelihood" value="Not sure"> Not sure</label>
+              <label><input type="radio" name="likelihood" value="Likely"> Likely</label>
+              <label><input type="radio" name="likelihood" value="Very likely"> Very likely</label>
+            </div>
+          </fieldset>
+
+          <fieldset class="q">
+            <legend><span class="num">4.</span> What is the most you would pay for such a workshop, including templates and a certificate?</legend>
+            <div class="choices">
+              <label><input type="radio" name="maxPrice" value="Only if free" required> Only if free</label>
+              <label><input type="radio" name="maxPrice" value="₹199"> ₹199</label>
+              <label><input type="radio" name="maxPrice" value="₹299"> ₹299</label>
+              <label><input type="radio" name="maxPrice" value="₹399"> ₹399</label>
+              <label><input type="radio" name="maxPrice" value="₹699"> ₹699</label>
+              <label><input type="radio" name="maxPrice" value="₹999 or more"> ₹999 or more</label>
+            </div>
+          </fieldset>
+
+          <fieldset class="q">
+            <legend><span class="num">5.</span> Which slot suits you best?</legend>
+            <div class="choices">
+              <label><input type="radio" name="slot" value="Weekday 6–8 PM" required> Weekday 6–8 PM</label>
+              <label><input type="radio" name="slot" value="Saturday afternoon"> Saturday afternoon</label>
+              <label><input type="radio" name="slot" value="Sunday morning"> Sunday morning</label>
+            </div>
+          </fieldset>
+
+          <fieldset class="q">
+            <legend><span class="num">6.</span> Could your MEU or institution host a session for its faculty?</legend>
+            <div class="choices">
+              <label><input type="radio" name="host" value="Yes, contact me" required> Yes, contact me</label>
+              <label><input type="radio" name="host" value="Maybe"> Maybe</label>
+              <label><input type="radio" name="host" value="No"> No</label>
+            </div>
+          </fieldset>
+
+          <div class="row-2" id="hostFields" hidden>
+            <div class="field"><label for="hostInstitution">Institution</label><input id="hostInstitution" name="hostInstitution" type="text" maxlength="200"></div>
+            <div class="field"><label for="hostContact">Best phone or email to reach you</label><input id="hostContact" name="hostContact" type="text" maxlength="160"></div>
+          </div>
+
+          <div class="field"><label for="comment">Anything else you would like us to know? <span class="opt">(optional)</span></label><textarea id="comment" name="comment" maxlength="1000"></textarea></div>
+
+          <div class="waitlist-box">
+            <label class="consent" style="margin:0"><input type="checkbox" id="waitlist" name="waitlist"> <span><b>Add me to the waitlist</b> for the hands-on starter workshop, <i>AI-Assisted Teaching Workflow</i> (December 2026, date to be announced).</span></label>
+            <label class="consent" id="waitlistConsentRow" hidden><input type="checkbox" id="waitlistConsent" name="waitlistConsent"> I agree to be contacted by email about this workshop. I can ask to be removed at any time.</label>
+          </div>
+
+          <input class="hp" type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true">
+          <button class="btn" type="submit" id="submitBtn">Send feedback</button>
+          <div id="formMsg" class="msg" role="status"></div>
+          <p class="note">Your answers are used only to plan future sessions in this series. See the <a href="privacy.html">privacy notice</a>.</p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <footer><span class="footer-brand"><img src="assets/brain-bulb-mark.png" alt="">The AI-Ready Medical Teacher</span>
+    <nav><a href="index.html">Webinar</a><a href="workshop.html">Starter workshop</a><a href="terms.html">Terms</a><a href="refund.html">Refund policy</a><a href="privacy.html">Privacy</a></nav>
+  </footer>
+
+  <script src="config.js"></script>
+  <script src="api.js"></script>
+  <script src="site.js"></script>
+  <script>
+    if (RegAPI.demo) document.getElementById("demoBanner").hidden = false;
+
+    var form = document.getElementById("surveyForm");
+    var msg = document.getElementById("formMsg");
+    var btn = document.getElementById("submitBtn");
+    var hostFields = document.getElementById("hostFields");
+    var waitlist = document.getElementById("waitlist");
+    var consentRow = document.getElementById("waitlistConsentRow");
+
+    function picked(name) { var el = form.querySelector('input[name="' + name + '"]:checked'); return el ? el.value : ""; }
+    function show(kind, text) { msg.className = "msg " + kind; msg.textContent = text; }
+
+    form.addEventListener("change", function () {
+      hostFields.hidden = picked("host") !== "Yes, contact me";
+      consentRow.hidden = !waitlist.checked;
+    });
+
+    form.addEventListener("submit", async function (e) {
+      e.preventDefault();
+      var f = form.elements;
+      var data = {
+        type: "survey",
+        email: f.email.value.trim(),
+        name: f.name.value.trim(),
+        prepTask: picked("prepTask"),
+        usefulness: Number(picked("usefulness")),
+        likelihood: picked("likelihood"),
+        maxPrice: picked("maxPrice"),
+        slot: picked("slot"),
+        host: picked("host"),
+        hostInstitution: picked("host") === "Yes, contact me" ? f.hostInstitution.value.trim() : "",
+        hostContact: picked("host") === "Yes, contact me" ? f.hostContact.value.trim() : "",
+        comment: f.comment.value.trim(),
+        waitlist: waitlist.checked,
+        waitlistConsent: f.waitlistConsent.checked,
+        website: f.website.value
+      };
+      if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(data.email)) return show("err", "Please enter the email you registered with.");
+      if (!data.prepTask || !data.usefulness || !data.likelihood || !data.maxPrice || !data.slot || !data.host) return show("err", "Please answer all six questions.");
+      if (data.waitlist && !data.waitlistConsent) return show("err", "To join the waitlist, please tick the box agreeing to be contacted.");
+
+      btn.disabled = true; btn.textContent = "Sending…";
+      try {
+        var res = await RegAPI.submit(data);
+        if (!res || !res.ok) throw new Error(res && res.error || "failed");
+        form.reset(); hostFields.hidden = true; consentRow.hidden = true;
+        show("ok", (res.updated ? "Your earlier response has been updated. " : "Thank you, your feedback is saved. ") +
+          (data.waitlist ? "You are on the waitlist and will hear first when registration opens." : ""));
+        msg.scrollIntoView({ behavior: "smooth", block: "center" });
+      } catch (err) {
+        show("err", "Sorry, something went wrong. Please try again in a moment.");
+      } finally {
+        btn.disabled = false; btn.textContent = "Send feedback";
+      }
+    });
+  </script>
+</body>
+</html>

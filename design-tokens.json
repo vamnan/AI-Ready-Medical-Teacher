@@ -1,0 +1,691 @@
+{
+  "color": {
+    "bg": {
+      "$value": "#121212",
+      "$type": "color",
+      "$description": "Page background",
+      "$extensions": {
+        "anydesign": {
+          "source": "design.md frontmatter",
+          "confidence": "high"
+        }
+      }
+    },
+    "bg-2": {
+      "$value": "#171717",
+      "$type": "color",
+      "$description": "Alternate band",
+      "$extensions": {
+        "anydesign": {
+          "source": "design.md frontmatter",
+          "confidence": "high"
+        }
+      }
+    },
+    "surface": {
+      "$value": "rgba(255,255,255,0.03)",
+      "$type": "color",
+      "$description": "Card fill",
+      "$extensions": {
+        "anydesign": {
+          "source": "design.md frontmatter",
+          "confidence": "high"
+        }
+      }
+    },
+    "surface-2": {
+      "$value": "rgba(255,255,255,0.05)",
+      "$type": "color",
+      "$description": "Raised fill",
+      "$extensions": {
+        "anydesign": {
+          "source": "design.md frontmatter",
+          "confidence": "medium"
+        }
+      }
+    },
+    "border": {
+      "$value": "rgba(255,255,255,0.08)",
+      "$type": "color",
+      "$description": "Default hairline",
+      "$extensions": {
+        "anydesign": {
+          "source": "design.md frontmatter",
+          "confidence": "high"
+        }
+      }
+    },
+    "border-strong": {
+      "$value": "rgba(255,255,255,0.14)",
+      "$type": "color",
+      "$description": "Emphasis border",
+      "$extensions": {
+        "anydesign": {
+          "source": "design.md frontmatter",
+          "confidence": "medium"
+        }
+      }
+    },
+    "text-primary": {
+      "$value": "#F0ECE4",
+      "$type": "color",
+      "$description": "Headings, body",
+      "$extensions": {
+        "anydesign": {
+          "source": "design.md frontmatter",
+          "confidence": "high"
+        }
+      }
+    },
+    "text-muted": {
+      "$value": "#B8B4AD",
+      "$type": "color",
+      "$description": "Secondary copy",
+      "$extensions": {
+        "anydesign": {
+          "source": "design.md frontmatter",
+          "confidence": "high"
+        }
+      }
+    },
+    "text-faint": {
+      "$value": "#7E7B75",
+      "$type": "color",
+      "$description": "Tertiary",
+      "$extensions": {
+        "anydesign": {
+          "source": "design.md frontmatter",
+          "confidence": "medium"
+        }
+      }
+    },
+    "accent": {
+      "$value": "#C9AD6A",
+      "$type": "color",
+      "$description": "Eyebrows, gold base",
+      "$extensions": {
+        "anydesign": {
+          "source": "design.md frontmatter",
+          "confidence": "high"
+        }
+      }
+    },
+    "accent-bright": {
+      "$value": "#E9C979",
+      "$type": "color",
+      "$description": "Italic emphasis",
+      "$extensions": {
+        "anydesign": {
+          "source": "design.md frontmatter",
+          "confidence": "high"
+        }
+      }
+    },
+    "accent-deep": {
+      "$value": "#A8874A",
+      "$type": "color",
+      "$description": "Gold shadow tone",
+      "$extensions": {
+        "anydesign": {
+          "source": "design.md frontmatter",
+          "confidence": "medium"
+        }
+      }
+    },
+    "on-accent": {
+      "$value": "#1A1200",
+      "$type": "color",
+      "$description": "Text on gold",
+      "$extensions": {
+        "anydesign": {
+          "source": "design.md frontmatter",
+          "confidence": "high"
+        }
+      }
+    },
+    "paper": {
+      "$value": "#F4F1E9",
+      "$type": "color",
+      "$description": "Light-band ground",
+      "$extensions": {
+        "anydesign": {
+          "source": "design.md frontmatter",
+          "confidence": "low"
+        }
+      }
+    },
+    "paper-2": {
+      "$value": "#ECE8DD",
+      "$type": "color",
+      "$extensions": {
+        "anydesign": {
+          "source": "design.md frontmatter"
+        }
+      }
+    },
+    "ink": {
+      "$value": "#0B0A08",
+      "$type": "color",
+      "$extensions": {
+        "anydesign": {
+          "source": "design.md frontmatter"
+        }
+      }
+    }
+  },
+  "typography": {
+    "font-family": {
+      "display-hero": {
+        "$value": "Instrument Serif, Georgia, serif",
+        "$type": "fontFamily",
+        "$description": "H1, white-to-grey horizontal gradient text",
+        "$extensions": {
+          "anydesign": {
+            "source": "design.md frontmatter"
+          }
+        }
+      },
+      "body": {
+        "$value": "Inter, system-ui, sans-serif",
+        "$type": "fontFamily",
+        "$description": "paragraphs",
+        "$extensions": {
+          "anydesign": {
+            "source": "design.md frontmatter"
+          }
+        }
+      }
+    },
+    "font-size": {
+      "display-hero": {
+        "$value": "76.5px",
+        "$type": "dimension",
+        "$description": "H1, white-to-grey horizontal gradient text",
+        "$extensions": {
+          "anydesign": {
+            "source": "design.md frontmatter"
+          }
+        }
+      },
+      "display-section": {
+        "$value": "46.4px",
+        "$type": "dimension",
+        "$description": "H2",
+        "$extensions": {
+          "anydesign": {
+            "source": "design.md frontmatter"
+          }
+        }
+      },
+      "heading": {
+        "$value": "38.4px",
+        "$type": "dimension",
+        "$description": "H3",
+        "$extensions": {
+          "anydesign": {
+            "source": "design.md frontmatter"
+          }
+        }
+      },
+      "subheading": {
+        "$value": "25.6px",
+        "$type": "dimension",
+        "$description": "H4 (audience labels)",
+        "$extensions": {
+          "anydesign": {
+            "source": "design.md frontmatter"
+          }
+        }
+      },
+      "body": {
+        "$value": "16px",
+        "$type": "dimension",
+        "$description": "paragraphs",
+        "$extensions": {
+          "anydesign": {
+            "source": "design.md frontmatter"
+          }
+        }
+      },
+      "button": {
+        "$value": "15.7px",
+        "$type": "dimension",
+        "$description": "CTAs",
+        "$extensions": {
+          "anydesign": {
+            "source": "design.md frontmatter"
+          }
+        }
+      },
+      "eyebrow": {
+        "$value": "11.5px",
+        "$type": "dimension",
+        "$description": "uppercase label",
+        "$extensions": {
+          "anydesign": {
+            "source": "design.md frontmatter"
+          }
+        }
+      }
+    },
+    "font-weight": {
+      "display-hero": {
+        "$value": 400,
+        "$type": "fontWeight",
+        "$description": "H1, white-to-grey horizontal gradient text",
+        "$extensions": {
+          "anydesign": {
+            "source": "design.md frontmatter"
+          }
+        }
+      },
+      "display-section": {
+        "$value": 400,
+        "$type": "fontWeight",
+        "$description": "H2",
+        "$extensions": {
+          "anydesign": {
+            "source": "design.md frontmatter"
+          }
+        }
+      },
+      "heading": {
+        "$value": 400,
+        "$type": "fontWeight",
+        "$description": "H3",
+        "$extensions": {
+          "anydesign": {
+            "source": "design.md frontmatter"
+          }
+        }
+      },
+      "subheading": {
+        "$value": 400,
+        "$type": "fontWeight",
+        "$description": "H4 (audience labels)",
+        "$extensions": {
+          "anydesign": {
+            "source": "design.md frontmatter"
+          }
+        }
+      },
+      "body": {
+        "$value": 400,
+        "$type": "fontWeight",
+        "$description": "paragraphs",
+        "$extensions": {
+          "anydesign": {
+            "source": "design.md frontmatter"
+          }
+        }
+      },
+      "button": {
+        "$value": 600,
+        "$type": "fontWeight",
+        "$description": "CTAs",
+        "$extensions": {
+          "anydesign": {
+            "source": "design.md frontmatter"
+          }
+        }
+      },
+      "eyebrow": {
+        "$value": 400,
+        "$type": "fontWeight",
+        "$description": "uppercase label",
+        "$extensions": {
+          "anydesign": {
+            "source": "design.md frontmatter"
+          }
+        }
+      }
+    },
+    "line-height": {
+      "display-hero": {
+        "$value": 1.08,
+        "$type": "number",
+        "$description": "H1, white-to-grey horizontal gradient text",
+        "$extensions": {
+          "anydesign": {
+            "source": "design.md frontmatter"
+          }
+        }
+      },
+      "display-section": {
+        "$value": 1.15,
+        "$type": "number",
+        "$description": "H2",
+        "$extensions": {
+          "anydesign": {
+            "source": "design.md frontmatter"
+          }
+        }
+      },
+      "heading": {
+        "$value": 1.08,
+        "$type": "number",
+        "$description": "H3",
+        "$extensions": {
+          "anydesign": {
+            "source": "design.md frontmatter"
+          }
+        }
+      },
+      "subheading": {
+        "$value": 1.08,
+        "$type": "number",
+        "$description": "H4 (audience labels)",
+        "$extensions": {
+          "anydesign": {
+            "source": "design.md frontmatter"
+          }
+        }
+      },
+      "body": {
+        "$value": 1.6,
+        "$type": "number",
+        "$description": "paragraphs",
+        "$extensions": {
+          "anydesign": {
+            "source": "design.md frontmatter"
+          }
+        }
+      },
+      "button": {
+        "$value": 1.6,
+        "$type": "number",
+        "$description": "CTAs",
+        "$extensions": {
+          "anydesign": {
+            "source": "design.md frontmatter"
+          }
+        }
+      },
+      "eyebrow": {
+        "$value": 1.6,
+        "$type": "number",
+        "$description": "uppercase label",
+        "$extensions": {
+          "anydesign": {
+            "source": "design.md frontmatter"
+          }
+        }
+      }
+    },
+    "letter-spacing": {
+      "display-hero": {
+        "$value": "-0.01em",
+        "$type": "dimension",
+        "$description": "H1, white-to-grey horizontal gradient text",
+        "$extensions": {
+          "anydesign": {
+            "source": "design.md frontmatter"
+          }
+        }
+      },
+      "display-section": {
+        "$value": "-0.005em",
+        "$type": "dimension",
+        "$description": "H2",
+        "$extensions": {
+          "anydesign": {
+            "source": "design.md frontmatter"
+          }
+        }
+      },
+      "heading": {
+        "$value": "-0.02em",
+        "$type": "dimension",
+        "$description": "H3",
+        "$extensions": {
+          "anydesign": {
+            "source": "design.md frontmatter"
+          }
+        }
+      },
+      "subheading": {
+        "$value": "-0.02em",
+        "$type": "dimension",
+        "$description": "H4 (audience labels)",
+        "$extensions": {
+          "anydesign": {
+            "source": "design.md frontmatter"
+          }
+        }
+      },
+      "eyebrow": {
+        "$value": "0.22em",
+        "$type": "dimension",
+        "$description": "uppercase label",
+        "$extensions": {
+          "anydesign": {
+            "source": "design.md frontmatter"
+          }
+        }
+      }
+    }
+  },
+  "spacing": {
+    "base": {
+      "$value": "4px",
+      "$type": "dimension",
+      "$extensions": {
+        "anydesign": {
+          "source": "design.md frontmatter"
+        }
+      }
+    },
+    "8": {
+      "$value": "8px",
+      "$type": "dimension",
+      "$extensions": {
+        "anydesign": {
+          "source": "design.md frontmatter"
+        }
+      }
+    },
+    "15": {
+      "$value": "15px",
+      "$type": "dimension",
+      "$extensions": {
+        "anydesign": {
+          "source": "design.md frontmatter"
+        }
+      }
+    },
+    "18": {
+      "$value": "18px",
+      "$type": "dimension",
+      "$extensions": {
+        "anydesign": {
+          "source": "design.md frontmatter"
+        }
+      }
+    },
+    "28": {
+      "$value": "28px",
+      "$type": "dimension",
+      "$extensions": {
+        "anydesign": {
+          "source": "design.md frontmatter"
+        }
+      }
+    },
+    "30": {
+      "$value": "30px",
+      "$type": "dimension",
+      "$extensions": {
+        "anydesign": {
+          "source": "design.md frontmatter"
+        }
+      }
+    },
+    "34": {
+      "$value": "34px",
+      "$type": "dimension",
+      "$extensions": {
+        "anydesign": {
+          "source": "design.md frontmatter"
+        }
+      }
+    },
+    "36": {
+      "$value": "36px",
+      "$type": "dimension",
+      "$extensions": {
+        "anydesign": {
+          "source": "design.md frontmatter"
+        }
+      }
+    },
+    "56": {
+      "$value": "56px",
+      "$type": "dimension",
+      "$extensions": {
+        "anydesign": {
+          "source": "design.md frontmatter"
+        }
+      }
+    },
+    "90": {
+      "$value": "90px",
+      "$type": "dimension",
+      "$extensions": {
+        "anydesign": {
+          "source": "design.md frontmatter"
+        }
+      }
+    },
+    "110": {
+      "$value": "110px",
+      "$type": "dimension",
+      "$extensions": {
+        "anydesign": {
+          "source": "design.md frontmatter"
+        }
+      }
+    },
+    "120": {
+      "$value": "120px",
+      "$type": "dimension",
+      "$extensions": {
+        "anydesign": {
+          "source": "design.md frontmatter"
+        }
+      }
+    },
+    "150": {
+      "$value": "150px",
+      "$type": "dimension",
+      "$extensions": {
+        "anydesign": {
+          "source": "design.md frontmatter"
+        }
+      }
+    }
+  },
+  "radius": {
+    "card": {
+      "$value": "14px",
+      "$type": "dimension",
+      "$extensions": {
+        "anydesign": {
+          "source": "design.md frontmatter"
+        }
+      }
+    },
+    "md": {
+      "$value": "16px",
+      "$type": "dimension",
+      "$extensions": {
+        "anydesign": {
+          "source": "design.md frontmatter"
+        }
+      }
+    },
+    "default": {
+      "$value": "18px",
+      "$type": "dimension",
+      "$extensions": {
+        "anydesign": {
+          "source": "design.md frontmatter"
+        }
+      }
+    },
+    "sm": {
+      "$value": "12px",
+      "$type": "dimension",
+      "$extensions": {
+        "anydesign": {
+          "source": "design.md frontmatter"
+        }
+      }
+    },
+    "lg": {
+      "$value": "28px",
+      "$type": "dimension",
+      "$extensions": {
+        "anydesign": {
+          "source": "design.md frontmatter"
+        }
+      }
+    },
+    "pill": {
+      "$value": "100px",
+      "$type": "dimension",
+      "$extensions": {
+        "anydesign": {
+          "source": "design.md frontmatter"
+        }
+      }
+    }
+  },
+  "shadow": {
+    "float": {
+      "$value": "0 30px 80px -30px rgba(0,0,0,0.8)",
+      "$type": "shadow",
+      "$extensions": {
+        "anydesign": {
+          "source": "design.md frontmatter"
+        }
+      }
+    },
+    "glow-accent": {
+      "$value": "0 0 80px -20px rgba(201,173,106,0.45)",
+      "$type": "shadow",
+      "$extensions": {
+        "anydesign": {
+          "source": "design.md frontmatter"
+        }
+      }
+    },
+    "button-bevel": {
+      "$value": "inset 0 1px 0 rgba(255,255,255,0.45), inset 0 -1px 0 rgba(0,0,0,0.25)",
+      "$type": "shadow",
+      "$extensions": {
+        "anydesign": {
+          "source": "design.md frontmatter"
+        }
+      }
+    }
+  },
+  "motion": {
+    "ease": {
+      "$value": "cubic-bezier(0.22, 1, 0.36, 1)",
+      "$type": "duration",
+      "$extensions": {
+        "anydesign": {
+          "source": "design.md frontmatter"
+        }
+      }
+    }
+  },
+  "$extensions": {
+    "anydesign": {
+      "source": "https://unfairadvantage.academy/",
+      "captured_at": "2026-10-31",
+      "method": "generated from design.md by scripts/build_tokens_json.py",
+      "spec": "W3C Design Tokens Community Group 2025.10"
+    }
+  }
+}

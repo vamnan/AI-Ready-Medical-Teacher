@@ -1,0 +1,57 @@
+/* AI-Ready Medical Teacher design system, applied on top of styles.css.
+   Loaded by every public page; admin.html deliberately does not load it. */
+:root {
+  --navy: #164e6b;
+  --navy-dark: #163857;
+  --blue: #214f7a;
+  --gold: #d2ac4e;
+  --ink: #243746;
+  --muted: #5b6776;
+  --line: #dde3ea;
+  --control-line: #c8d1db;
+  --bg: #f5f7fa;
+  --card: #ffffff;
+  --wash: #eef2f6;
+  --amber: #f4aa35;
+  --amber-dark: #d98f22;
+  --ok: #2e7d4f;
+  --err: #b3261e;
+  --whatsapp: #25d366;
+  --whatsapp-hover: #1ebe5b;
+  --sans: Arial, Helvetica, sans-serif;
+  --focus-ring: 0 0 0 2px #f5f7fa, 0 0 0 4px #164e6b;
+}
+
+a { color: var(--blue); }
+.btn:focus-visible, a:focus-visible, summary:focus-visible { outline: none; box-shadow: var(--focus-ring); border-radius: 6px; }
+
+/* Topbar: brain-bulb mark (48px minimum) beside the series name */
+.brand { display: inline-flex; align-items: center; gap: 12px; }
+.brand-logo { width: 48px; height: 48px; object-fit: contain; flex: none; }
+
+/* Hero: navy band with the gold circuit-trace motif */
+.hero { position: relative; overflow: hidden; }
+.hero .wrap { position: relative; z-index: 1; }
+.hero-traces { position: absolute; left: -40px; bottom: -30px; width: 420px; height: 260px; opacity: .35; pointer-events: none; }
+.hero-traces path { fill: none; stroke: var(--gold); stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+.hero-traces circle { fill: none; stroke: var(--gold); stroke-width: 3; }
+.hero-cta small { opacity: 1; }
+
+.btn-wa { background: var(--whatsapp); }
+.btn-wa:hover { background: var(--whatsapp-hover); }
+
+/* Registration: ceremonial emblem on the white alt section */
+.register-emblem { display: block; width: 240px; max-width: 70%; height: auto; margin-top: 18px; }
+
+/* Facilitator portrait */
+.facilitator-photo { display: block; width: 180px; height: 180px; object-fit: cover; object-position: 50% 25%; border-radius: 10px; border: 1px solid var(--line); margin-bottom: 18px; }
+
+/* Footer mark */
+footer .footer-brand { display: inline-flex; align-items: center; gap: 10px; color: var(--navy-dark); font-family: var(--serif); font-weight: 700; }
+footer .footer-brand img { width: 48px; height: 48px; object-fit: contain; }
+footer nav a { color: var(--muted); }
+
+@media (max-width: 800px) {
+  .hero-traces { width: 300px; height: 190px; opacity: .25; }
+  .register-emblem { width: 140px; }
+}
